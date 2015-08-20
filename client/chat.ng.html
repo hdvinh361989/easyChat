@@ -1,0 +1,31 @@
+<ion-view view-title="Message">
+    <ion-content>
+        <div class="row vt-display-msg-box">
+            <div class="col">
+                <div class="row" ng-repeat='msg in wbRtcCtrl.messageCollection[wbRtcCtrl.currentChatTo]'>
+                    <div class="col col-50"
+                         ng-class='{"col-offset-50": msg.sender === wbRtcCtrl.sessionDescription.userid}'>
+                        {{msg.sender === wbRtcCtrl.sessionDescription.userid ? 'Me:' : msg.sender + ':'}}
+                        {{msg.data.text}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+    <div class="row vt-type-msg-box">
+        <div class="col">
+            <div class="list">
+                <div class="item item-input-inset">
+                    <label class="item-input-wrapper">
+                        <input ng-keypress="wbRtcCtrl.keyPressHandler($event)"
+                               ng-model="wbRtcCtrl.msgTxt"
+                               type="text" placeholder="Type a message...">
+                    </label>
+                    <button ng-click='wbRtcCtrl.sendMessage()' class="button button-small button-clear button-positive">
+                        Send
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-view>

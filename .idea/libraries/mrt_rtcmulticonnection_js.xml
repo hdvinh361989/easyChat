@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="mrt_rtcmulticonnection.js" type="javaScript">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/.meteor/local/build/programs/web.browser/packages/mrt_rtcmulticonnection.js" />
+      <root url="file://$PROJECT_DIR$/.meteor/local/build/programs/web.browser/packages/angel1411_rtcmulticonnection.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,22 @@
+<ion-view view-title='welcome'>
+    <ion-content>
+        <div class="row responsive-sm">
+            <div class="col col-33 col-offset-33">
+                <h1 class="text-center">Welcome to easyChat</h1>
+                <div class="list">
+                    <label class="item item-input">
+                        <input ng-model="homeCtrl.roomID" type="text" placeholder="Room ID">
+                    </label>
+                    <div class="item button-bar">
+                        <button ng-click="homeCtrl.connect(homeCtrl.roomID, 'create')" class="button button-block button-positive">
+                            New
+                        </button>
+                        <button ng-click="homeCtrl.connect(homeCtrl.roomID, 'join')" class="button button-block button-positive">
+                            Join
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
